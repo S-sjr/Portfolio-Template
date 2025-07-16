@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留学生作品集</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- 这里是网站的头部信息，包含标题和CSS链接 -->
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo" data-lang="logo">作品集</a>
+            <ul class="nav-links">
+                <li><a href="#home" data-lang="home-link">首页</a></li>
+                <li><a href="#projects" data-lang="projects-link">项目</a></li>
+                <li><a href="#about" data-lang="about-link">关于</a></li>
+                <li><a href="#contact" data-lang="contact-link">联系</a></li>
+                <li><button id="language-toggle" class="language-btn">EN</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 data-lang="hero-title">欢迎来到我的作品集</h1>
+            <p data-lang="hero-subtitle">展示我的学术成果和创意项目</p>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 data-lang="projects-title">我的项目</h2>
+            <div class="project-grid">
+                <!-- 项目1 -->
+                <div class="project-card">
+                    <a href="project-detail.html">
+                        <img src="img/deleteMe.png" alt="项目1" class="project-img">
+                        <h3>项目标题1</h3>
+                        <p>项目描述1</p>
+                    </a>
+                </div>
+                
+                <!-- 项目2 -->
+                <div class="project-card">
+                    <img src="img/deleteMe.png" alt="项目2" class="project-img">
+                    <h3>项目标题2</h3>
+                    <p>项目描述2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 data-lang="about-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-flex-container">
+                    <img src="/c:/Users/29768/Documents/TRAE_Code/portfolio_template/img/profile.jpg" alt="张三的个人照片" class="profile-img">
+                    <div class="bio">
+                        <h3>张三</h3>
+                        <p>资深全栈开发工程师，5年Web开发经验，精通React和Node.js，专注于构建高性能、可扩展的Web应用。</p>
+                    </div>
+                </div>
+                <div class="resume-sections">
+                            <div class="resume-section">
+                                <h4><i class="fas fa-graduation-cap"></i> 教育背景</h4>
+                                <ul>
+                                    <li>2020-2024 某某大学 计算机科学 学士学位</li>
+                                    <li>GPA: 3.8/4.0</li>
+                                    <li>主修课程: 数据结构、算法、Web开发</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="resume-section">
+                                <h4><i class="fas fa-briefcase"></i> 工作经历</h4>
+                                <ul>
+                                    <li>2023 某某科技公司 前端开发实习生</li>
+                                    <li>2022 某某实验室 研究助理</li>
+                                    <li>2021 某某社团 技术部部长</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="resume-section">
+                                <h4><i class="fas fa-code"></i> 技能专长</h4>
+                                <ul>
+                                    <li>编程语言: HTML/CSS, JavaScript, Python</li>
+                                    <li>框架: React, Vue.js</li>
+                                    <li>工具: Git, VS Code, Figma</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="resume-section">
+                                <h4><i class="fas fa-trophy"></i> 获奖情况</h4>
+                                <ul>
+                                    <li>2023 全国大学生编程竞赛 一等奖</li>
+                                    <li>2022 校级优秀学生干部</li>
+                                    <li>2021 学术奖学金</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-lang="contact-title">联系我</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> 邮箱: example@email.com</p>
+                <p><i class="fas fa-phone"></i> 电话: +86 123 4567 8910</p>
+                <p><i class="fas fa-map-marker-alt"></i> 地址: 中国某省某市某区</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p data-lang="footer-text">© 2023 留学生作品集. 保留所有权利.</p>
+        </div>
+    </footer>
+    
+    <!-- 语言切换脚本 -->
+    <script>
+        const languageToggle = document.getElementById('language-toggle');
+        const textElements = {
+            'logo': ['作品集', 'Portfolio'],
+            'home-link': ['首页', 'Home'],
+            'projects-title': ['我的项目', 'My Projects'],
+            'education': ['教育背景', 'Education'],
+            'skills': ['专业技能', 'Skills'],
+            'awards': ['获奖情况', 'Awards'],
+            'projects-link': ['项目', 'Projects'],
+            'about-link': ['关于', 'About'],
+            'contact-link': ['联系', 'Contact'],
+            'hero-title': ['欢迎来到我的作品集', 'Welcome to My Portfolio'],
+            'hero-subtitle': ['展示我的学术成果和创意项目', 'Showcasing my academic achievements and creative projects'],
+            'projects-title': ['我的项目', 'My Projects'],
+            'about-title': ['关于我', 'About Me'],
+            'contact-title': ['联系我', 'Contact Me'],
+            'footer-text': ['© 2023 留学生作品集. 保留所有权利.', '© 2023 Student Portfolio. All rights reserved.']
+        };
+        
+        let currentLang = 'zh';
+        
+        languageToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            languageToggle.textContent = currentLang === 'zh' ? 'EN' : '中文';
+            
+            // 更新所有文本元素
+            Object.keys(textElements).forEach(key => {
+                const elements = document.querySelectorAll(`[data-lang="${key}"]`);
+                elements.forEach(el => {
+                    el.textContent = textElements[key][currentLang === 'zh' ? 0 : 1];
+                });
+            });
+        });
+    </script>
+</body>
+</html>

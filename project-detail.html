@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目详情 - 留学生作品集</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" data-lang="logo">作品集</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home" data-lang="home-link">首页</a></li>
+                <li><a href="index.html#projects" data-lang="projects-link">项目</a></li>
+                <li><a href="index.html#about" data-lang="about-link">关于</a></li>
+                <li><a href="index.html#contact" data-lang="contact-link">联系</a></li>
+                <li><button id="language-toggle" class="language-btn">EN</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 项目详情内容 -->
+    <main class="project-detail">
+        <div class="container">
+            <h1 data-lang="project-title">项目标题</h1>
+            <div class="project-meta">
+                <span class="date">2023年</span>
+                <span class="category">分类</span>
+            </div>
+            
+            <div class="project-content">
+                <img src="/c:/Users/29768/Documents/TRAE_Code/portfolio_template/img/deleteMe.png" alt="项目展示图" class="featured-image">
+                
+                <div class="project-description">
+                    <h2 data-lang="project-overview">项目概述</h2>
+                    <p>这里是项目的详细描述内容...</p>
+                    
+                    <h2 data-lang="tech-stack">技术栈</h2>
+                    <ul class="tech-stack">
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                        <li>其他技术</li>
+                    </ul>
+                    
+                    <h2 data-lang="project-link">项目链接</h2>
+                    <a href="#" class="project-link">查看在线演示</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-lang="footer-text">© 2023 留学生作品集. 保留所有权利.</p>
+        </div>
+    </footer>
+    
+    <!-- 语言切换脚本 -->
+    <script>
+        const languageToggle = document.getElementById('language-toggle');
+        const textElements = {
+            'logo': ['作品集', 'Portfolio'],
+            'home-link': ['首页', 'Home'],
+            'projects-link': ['项目', 'Projects'],
+            'about-link': ['关于', 'About'],
+            'contact-link': ['联系', 'Contact'],
+            'project-title': ['项目标题', 'Project Title'],
+            'project-overview': ['项目概述', 'Project Overview'],
+            'tech-stack': ['技术栈', 'Tech Stack'],
+            'project-link': ['查看在线演示', 'View Demo'],
+            'footer-text': ['© 2023 留学生作品集. 保留所有权利.', '© 2023 Student Portfolio. All rights reserved.']
+        };
+        
+        let currentLang = 'zh';
+        
+        languageToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            languageToggle.textContent = currentLang === 'zh' ? 'EN' : '中文';
+            
+            // 更新所有文本元素
+            Object.keys(textElements).forEach(key => {
+                const elements = document.querySelectorAll(`[data-lang="${key}"]`);
+                elements.forEach(el => {
+                    el.textContent = textElements[key][currentLang === 'zh' ? 0 : 1];
+                });
+            });
+        });
+    </script>
+</body>
+</html>
